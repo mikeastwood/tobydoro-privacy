@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tobydoro — Privacy Policy</title>
+    <meta name="description" content="Privacy Policy for Tobydoro, a Flowmodoro productivity app for iOS. 100% offline, no data collection.">
+    <link rel="alternate" hreflang="en" href="https://tobydoro.app/privacy">
+    <link rel="alternate" hreflang="es" href="https://tobydoro.app/privacy">
+    <style>
+        :root {
+            --bg: #ffffff;
+            --bg-alt: #f8fafa;
+            --text: #1a1a2e;
+            --text-secondary: #555;
+            --accent: #2dd4bf;
+            --accent-dark: #14b8a6;
+            --border: #e5e7eb;
+            --card-bg: #f0fdfa;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #1a1a2e;
+                --bg-alt: #16213e;
+                --text: #e0e0e0;
+                --text-secondary: #a0a0a0;
+                --accent: #2dd4bf;
+                --accent-dark: #5eead4;
+                --border: #2a2a4a;
+                --card-bg: #1e2d3d;
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem 4rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 2rem 0 1.5rem;
+            border-bottom: 2px solid var(--accent);
+            margin-bottom: 2rem;
+        }
+
+        .logo {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--accent-dark);
+            letter-spacing: -0.5px;
+        }
+
+        header h1 {
+            font-size: 1.25rem;
+            font-weight: 400;
+            color: var(--text-secondary);
+            margin-top: 0.25rem;
+        }
+
+        .updated {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-top: 0.5rem;
+        }
+
+        /* Language toggle */
+        .lang-toggle {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .lang-btn {
+            padding: 0.4rem 1.2rem;
+            border: 2px solid var(--accent);
+            border-radius: 9999px;
+            background: transparent;
+            color: var(--accent-dark);
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .lang-btn:hover {
+            background: var(--accent);
+            color: var(--bg);
+        }
+
+        .lang-btn.active {
+            background: var(--accent);
+            color: var(--bg);
+        }
+
+        /* Summary box */
+        .summary {
+            background: var(--card-bg);
+            border-left: 4px solid var(--accent);
+            padding: 1.25rem 1.5rem;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 2.5rem;
+            font-size: 0.95rem;
+        }
+
+        .summary strong {
+            color: var(--accent-dark);
+        }
+
+        /* Sections */
+        article section {
+            margin-bottom: 2rem;
+        }
+
+        article h2 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--accent-dark);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.75rem;
+            padding-bottom: 0.4rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        article h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-top: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        article p {
+            margin-bottom: 0.75rem;
+            color: var(--text);
+        }
+
+        article ul {
+            margin: 0.5rem 0 1rem 1.5rem;
+        }
+
+        article li {
+            margin-bottom: 0.35rem;
+        }
+
+        a {
+            color: var(--accent-dark);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .rights-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.35rem;
+            margin: 0.5rem 0 1rem;
+        }
+
+        .right-item {
+            padding: 0.4rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .right-item::before {
+            content: "\2713";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        footer a {
+            color: var(--accent-dark);
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 1rem 1rem 3rem;
+            }
+            header {
+                padding: 1.5rem 0 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">Tobydoro</div>
+            <h1 id="page-title">Privacy Policy</h1>
+            <p class="updated" id="page-date">Last updated: February 27, 2026</p>
+        </header>
+
+        <nav class="lang-toggle" aria-label="Language selection">
+            <button class="lang-btn active" id="btn-en" onclick="setLang('en')" aria-label="English">English</button>
+            <button class="lang-btn" id="btn-es" onclick="setLang('es')" aria-label="Espanol">Español</button>
+        </nav>
+
+        <!-- ==================== ENGLISH ==================== -->
+        <article id="content-en" lang="en">
+            <div class="summary">
+                <strong>Tobydoro does not collect, transmit, or share any of your data.</strong>
+                All information stays on your device. There are no servers, no analytics, no tracking,
+                and no third-party access. Your privacy is guaranteed by design.
+            </div>
+
+            <section>
+                <h2>1. Data Stored on Your Device</h2>
+                <p>Tobydoro stores the following data locally on your device using Apple's on-device storage technologies (SwiftData and UserDefaults):</p>
+                <ul>
+                    <li><strong>Flow sessions:</strong> start and end times, duration, and completion status</li>
+                    <li><strong>Tasks and projects:</strong> names, notes, and organization data</li>
+                    <li><strong>Tags:</strong> labels you create to categorize your work</li>
+                    <li><strong>Journal entries:</strong> personal reflections you write after sessions</li>
+                    <li><strong>Mood and energy ratings:</strong> numeric ratings (1-5) you provide before sessions</li>
+                    <li><strong>Distraction counts:</strong> the number of distractions you log during sessions</li>
+                    <li><strong>Session reflections:</strong> notes on session quality and break activity choices</li>
+                    <li><strong>App preferences:</strong> your chosen settings such as break ratios and quiet hours</li>
+                </ul>
+                <p>All of this data is created and stored on your device. The developer does not have access to it.</p>
+            </section>
+
+            <section>
+                <h2>2. No Data Collection or Transmission</h2>
+                <p>Tobydoro does not operate its own servers and contains no analytics SDKs, crash reporting tools, advertising frameworks, or third-party code that transmits your data. There are no user accounts or logins. The app makes zero network calls to developer-controlled infrastructure.</p>
+                <p>Under Apple's App Store privacy definitions, data that is processed only on-device and never sent to a server is <strong>not considered "collected."</strong> Tobydoro qualifies for <strong>"Data Not Collected"</strong> across all privacy categories.</p>
+            </section>
+
+            <section>
+                <h2>3. iCloud Sync (Optional)</h2>
+                <p>If you enable iCloud sync on your device, your Tobydoro data may sync to your personal iCloud account for backup and multi-device access. This synchronization is:</p>
+                <ul>
+                    <li>Handled entirely by Apple's CloudKit framework</li>
+                    <li>Governed by <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's Privacy Policy</a></li>
+                    <li>Stored in your personal iCloud account only</li>
+                    <li>Not accessible to the developer of Tobydoro</li>
+                </ul>
+                <p>You can disable iCloud sync at any time in your device's Settings under iCloud.</p>
+            </section>
+
+            <section>
+                <h2>4. No Third-Party Access</h2>
+                <p>No third parties have access to any of your data. Tobydoro does not share, sell, or transmit your information to any external party. We do not sell or share personal information as defined by the California Consumer Privacy Act (CCPA/CPRA).</p>
+            </section>
+
+            <section>
+                <h2>5. No Tracking</h2>
+                <p>Tobydoro does not track you across other apps or websites. The app does not use device identifiers, advertising identifiers (IDFA), fingerprinting, or any form of cross-app tracking. There are no cookies or web beacons.</p>
+            </section>
+
+            <section>
+                <h2>6. Data Security</h2>
+                <p>Your data is protected by Apple's built-in device security, including:</p>
+                <ul>
+                    <li>On-device encryption (Data Protection) when your device is locked</li>
+                    <li>Secure Enclave for biometric authentication (Face ID / Touch ID)</li>
+                    <li>App sandboxing that prevents other apps from accessing Tobydoro's data</li>
+                </ul>
+                <p>If iCloud sync is enabled, data in transit and at rest in iCloud is encrypted by Apple.</p>
+            </section>
+
+            <section>
+                <h2>7. Deleting Your Data</h2>
+                <p>You can delete all data stored by Tobydoro in two ways:</p>
+                <ul>
+                    <li>Use the <strong>"Delete All Data"</strong> option in the app's Settings screen. This removes all sessions, tasks, tags, projects, journal entries, and resets all preferences.</li>
+                    <li>Delete the Tobydoro app from your device, which removes all associated local data.</li>
+                </ul>
+                <p>If iCloud sync was enabled, you may also need to delete the data from iCloud via Settings > Apple ID > iCloud > Manage Storage.</p>
+            </section>
+
+            <section>
+                <h2>8. Health and Wellbeing Disclaimer</h2>
+                <p>Tobydoro is a general wellness and productivity tool. It tracks work patterns and suggests breaks based on time-based rules. <strong>It is not a medical device,</strong> does not provide medical advice, and is not intended to diagnose, treat, cure, or prevent any disease or medical condition.</p>
+                <p>If you have concerns about your mental or physical health, please consult a qualified healthcare professional.</p>
+            </section>
+
+            <section>
+                <h2>9. Your Rights by Jurisdiction</h2>
+
+                <h3>European Union / EEA (GDPR)</h3>
+                <p>Since Tobydoro processes data exclusively on your device, the developer does not act as a data controller for your personal data in the traditional sense. However, in the spirit of transparency and GDPR compliance, we provide the following information:</p>
+                <p><strong>Data controller:</strong> <!-- REPLACE: Your full legal name --> Mike, individual developer, based in <!-- REPLACE: Your city --> Spain.</p>
+                <p><strong>Legal basis:</strong> Legitimate interest (app functionality). No personal data is transmitted to or processed by the developer.</p>
+                <p><strong>Your rights under GDPR:</strong></p>
+                <div class="rights-grid">
+                    <div class="right-item">Right of access to your data (exercised directly on your device)</div>
+                    <div class="right-item">Right to rectification (edit your data within the app)</div>
+                    <div class="right-item">Right to erasure ("Delete All Data" in Settings)</div>
+                    <div class="right-item">Right to data portability</div>
+                    <div class="right-item">Right to object to processing</div>
+                    <div class="right-item">Right to restriction of processing</div>
+                </div>
+                <p>To exercise any right, contact: <a href="mailto:privacy@tobydoro.app">privacy@tobydoro.app</a></p>
+                <p><strong>Supervisory authority:</strong> You have the right to lodge a complaint with the <a href="https://www.aepd.es" target="_blank" rel="noopener">Agencia Española de Protección de Datos (AEPD)</a>, C/ Jorge Juan, 6, 28001 Madrid, Spain.</p>
+                <p><strong>International transfers:</strong> No personal data is transferred outside your device. If iCloud sync is enabled, Apple manages transfers under its own Standard Contractual Clauses (SCCs).</p>
+                <p><strong>Data retention:</strong> Data is retained on your device for as long as the app is installed. Deletion is immediate when you use "Delete All Data" or uninstall the app.</p>
+
+                <h3>United Kingdom (UK GDPR)</h3>
+                <p>UK residents have the same rights as listed above under GDPR. The relevant supervisory authority is the <a href="https://ico.org.uk" target="_blank" rel="noopener">Information Commissioner's Office (ICO)</a>, Wycliffe House, Water Lane, Wilmslow, SK9 5AF, United Kingdom.</p>
+
+                <h3>California, USA (CCPA/CPRA)</h3>
+                <p>Under the California Consumer Privacy Act:</p>
+                <ul>
+                    <li>We do <strong>not sell</strong> personal information.</li>
+                    <li>We do <strong>not share</strong> personal information for cross-context behavioral advertising.</li>
+                    <li>We do <strong>not use or disclose</strong> sensitive personal information for purposes beyond those authorized by the CCPA.</li>
+                    <li>Categories of personal information collected: <strong>None.</strong></li>
+                </ul>
+                <p>California residents have the right to know, delete, and opt-out of the sale of personal information. Since we collect no data, these rights are inherently fulfilled.</p>
+
+                <h3>Brazil (LGPD)</h3>
+                <p>Brazilian residents have rights to confirmation, access, correction, anonymization, deletion, and portability of personal data. Since no personal data is collected or processed by the developer, these rights are inherently fulfilled. Legal basis: consent (acceptance of terms by using the app).</p>
+
+                <h3>Canada (PIPEDA)</h3>
+                <p>Canadian residents are protected under the Personal Information Protection and Electronic Documents Act. Tobydoro complies with PIPEDA's fair information principles: no personal information is collected, and the purpose of on-device data storage is solely for app functionality.</p>
+
+                <h3>South Africa (POPIA)</h3>
+                <p>South African residents may contact the <a href="https://inforegulator.org.za" target="_blank" rel="noopener">Information Regulator</a> for privacy concerns. No personal information is processed by the developer.</p>
+
+                <h3>Japan (APPI)</h3>
+                <p>No personal information is acquired, used, or provided to third parties by the developer. All data processing occurs exclusively on the user's device.</p>
+            </section>
+
+            <section>
+                <h2>10. Children's Privacy</h2>
+                <p>Tobydoro is not directed at children under 13 (COPPA) or under 16 (GDPR Article 8). The app does not knowingly collect personal information from anyone, including children. Since all data remains on-device and is never transmitted, there are no age-related data concerns.</p>
+            </section>
+
+            <section>
+                <h2>11. Changes to This Policy</h2>
+                <p>If this privacy policy is updated, the revised version will be published at this URL and included in a future app update. The "Last updated" date at the top will reflect the change. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
+            </section>
+
+            <section>
+                <h2>12. Contact</h2>
+                <p>If you have questions about this privacy policy or wish to exercise your data rights:</p>
+                <ul>
+                    <li><strong>Privacy:</strong> <a href="mailto:privacy@tobydoro.app">privacy@tobydoro.app</a></li>
+                    <li><strong>Support:</strong> <a href="mailto:support@tobydoro.app">support@tobydoro.app</a></li>
+                </ul>
+                <p>Developer: <!-- REPLACE: Your full legal name --> Mike (individual developer), Spain.</p>
+            </section>
+        </article>
+
+        <!-- ==================== SPANISH ==================== -->
+        <article id="content-es" lang="es" class="hidden">
+            <div class="summary">
+                <strong>Tobydoro no recopila, transmite ni comparte ninguno de tus datos.</strong>
+                Toda la información permanece en tu dispositivo. No hay servidores, ni analítica, ni rastreo,
+                ni acceso de terceros. Tu privacidad está garantizada por diseño.
+            </div>
+
+            <section>
+                <h2>1. Datos Almacenados en Tu Dispositivo</h2>
+                <p>Tobydoro almacena los siguientes datos localmente en tu dispositivo utilizando tecnologías de almacenamiento local de Apple (SwiftData y UserDefaults):</p>
+                <ul>
+                    <li><strong>Sesiones de flujo:</strong> horarios de inicio y fin, duración y estado de completado</li>
+                    <li><strong>Tareas y proyectos:</strong> nombres, notas y datos de organización</li>
+                    <li><strong>Etiquetas:</strong> las etiquetas que creas para categorizar tu trabajo</li>
+                    <li><strong>Entradas de diario:</strong> reflexiones personales que escribes después de las sesiones</li>
+                    <li><strong>Calificaciones de ánimo y energía:</strong> calificaciones numéricas (1-5) que proporcionas antes de las sesiones</li>
+                    <li><strong>Conteo de distracciones:</strong> el número de distracciones que registras durante las sesiones</li>
+                    <li><strong>Reflexiones de sesión:</strong> notas sobre la calidad de la sesión y actividades de descanso elegidas</li>
+                    <li><strong>Preferencias de la app:</strong> tus ajustes como ratios de descanso y horas de silencio</li>
+                </ul>
+                <p>Todos estos datos se crean y almacenan en tu dispositivo. El desarrollador no tiene acceso a ellos.</p>
+            </section>
+
+            <section>
+                <h2>2. Sin Recopilación ni Transmisión de Datos</h2>
+                <p>Tobydoro no opera sus propios servidores y no contiene SDKs de analítica, herramientas de reporte de errores, frameworks de publicidad ni código de terceros que transmita tus datos. No hay cuentas de usuario ni inicios de sesión. La app no realiza llamadas de red a infraestructura controlada por el desarrollador.</p>
+                <p>Según las definiciones de privacidad del App Store de Apple, los datos que se procesan solo en el dispositivo y nunca se envían a un servidor <strong>no se consideran "recopilados".</strong> Tobydoro califica para <strong>"Datos No Recopilados"</strong> en todas las categorías de privacidad.</p>
+            </section>
+
+            <section>
+                <h2>3. Sincronización iCloud (Opcional)</h2>
+                <p>Si activas la sincronización de iCloud en tu dispositivo, tus datos de Tobydoro pueden sincronizarse con tu cuenta personal de iCloud para respaldo y acceso en múltiples dispositivos. Esta sincronización:</p>
+                <ul>
+                    <li>Es manejada completamente por el framework CloudKit de Apple</li>
+                    <li>Está gobernada por la <a href="https://www.apple.com/es/legal/privacy/" target="_blank" rel="noopener">Política de Privacidad de Apple</a></li>
+                    <li>Se almacena solo en tu cuenta personal de iCloud</li>
+                    <li>No es accesible para el desarrollador de Tobydoro</li>
+                </ul>
+                <p>Puedes desactivar la sincronización de iCloud en cualquier momento en los Ajustes de tu dispositivo bajo iCloud.</p>
+            </section>
+
+            <section>
+                <h2>4. Sin Acceso de Terceros</h2>
+                <p>Ningún tercero tiene acceso a tus datos. Tobydoro no comparte, vende ni transmite tu información a ninguna parte externa. No vendemos ni compartimos información personal según la definición de la Ley de Privacidad del Consumidor de California (CCPA/CPRA).</p>
+            </section>
+
+            <section>
+                <h2>5. Sin Rastreo</h2>
+                <p>Tobydoro no te rastrea a través de otras apps o sitios web. La app no utiliza identificadores de dispositivo, identificadores publicitarios (IDFA), fingerprinting ni ninguna forma de rastreo entre apps. No hay cookies ni web beacons.</p>
+            </section>
+
+            <section>
+                <h2>6. Seguridad de los Datos</h2>
+                <p>Tus datos están protegidos por la seguridad integrada del dispositivo de Apple, incluyendo:</p>
+                <ul>
+                    <li>Cifrado en el dispositivo (Data Protection) cuando tu dispositivo está bloqueado</li>
+                    <li>Secure Enclave para autenticación biométrica (Face ID / Touch ID)</li>
+                    <li>Aislamiento de apps (sandboxing) que impide que otras apps accedan a los datos de Tobydoro</li>
+                </ul>
+                <p>Si la sincronización de iCloud está activada, los datos en tránsito y en reposo en iCloud están cifrados por Apple.</p>
+            </section>
+
+            <section>
+                <h2>7. Eliminar Tus Datos</h2>
+                <p>Puedes eliminar todos los datos almacenados por Tobydoro de dos maneras:</p>
+                <ul>
+                    <li>Usa la opción <strong>"Eliminar Todos los Datos"</strong> en la pantalla de Ajustes de la app. Esto elimina todas las sesiones, tareas, etiquetas, proyectos, entradas de diario y restablece todas las preferencias.</li>
+                    <li>Elimina la app Tobydoro de tu dispositivo, lo cual remueve todos los datos locales asociados.</li>
+                </ul>
+                <p>Si la sincronización de iCloud estaba activada, es posible que también necesites eliminar los datos de iCloud a través de Ajustes > Apple ID > iCloud > Gestionar Almacenamiento.</p>
+            </section>
+
+            <section>
+                <h2>8. Aviso sobre Salud y Bienestar</h2>
+                <p>Tobydoro es una herramienta de productividad y bienestar general. Registra patrones de trabajo y sugiere descansos basados en reglas de tiempo. <strong>No es un dispositivo médico,</strong> no proporciona consejos médicos y no está destinada a diagnosticar, tratar, curar ni prevenir ninguna enfermedad o condición médica.</p>
+                <p>Si tienes preocupaciones sobre tu salud mental o física, consulta a un profesional de salud calificado.</p>
+            </section>
+
+            <section>
+                <h2>9. Tus Derechos por Jurisdicción</h2>
+
+                <h3>Unión Europea / EEE (RGPD)</h3>
+                <p>Dado que Tobydoro procesa datos exclusivamente en tu dispositivo, el desarrollador no actúa como responsable del tratamiento de tus datos personales en el sentido tradicional. Sin embargo, en aras de la transparencia y el cumplimiento del RGPD, proporcionamos la siguiente información:</p>
+                <p><strong>Responsable del tratamiento:</strong> <!-- REPLACE: Tu nombre legal completo --> Mike, desarrollador independiente, con sede en <!-- REPLACE: Tu ciudad --> España.</p>
+                <p><strong>Base legal:</strong> Interés legítimo (funcionalidad de la app). Ningún dato personal es transmitido al ni procesado por el desarrollador.</p>
+                <p><strong>Tus derechos bajo el RGPD:</strong></p>
+                <div class="rights-grid">
+                    <div class="right-item">Derecho de acceso a tus datos (ejercido directamente en tu dispositivo)</div>
+                    <div class="right-item">Derecho de rectificación (edita tus datos dentro de la app)</div>
+                    <div class="right-item">Derecho de supresión ("Eliminar Todos los Datos" en Ajustes)</div>
+                    <div class="right-item">Derecho a la portabilidad de datos</div>
+                    <div class="right-item">Derecho de oposición al tratamiento</div>
+                    <div class="right-item">Derecho a la limitación del tratamiento</div>
+                </div>
+                <p>Para ejercer cualquier derecho, contacta: <a href="mailto:privacy@tobydoro.app">privacy@tobydoro.app</a></p>
+                <p><strong>Autoridad de control:</strong> Tienes derecho a presentar una reclamación ante la <a href="https://www.aepd.es" target="_blank" rel="noopener">Agencia Española de Protección de Datos (AEPD)</a>, C/ Jorge Juan, 6, 28001 Madrid, España.</p>
+                <p><strong>Transferencias internacionales:</strong> No se transfieren datos personales fuera de tu dispositivo. Si la sincronización de iCloud está activada, Apple gestiona las transferencias bajo sus propias Cláusulas Contractuales Tipo (SCCs).</p>
+                <p><strong>Retención de datos:</strong> Los datos se conservan en tu dispositivo mientras la app esté instalada. La eliminación es inmediata al usar "Eliminar Todos los Datos" o al desinstalar la app.</p>
+
+                <h3>Reino Unido (UK GDPR)</h3>
+                <p>Los residentes del Reino Unido tienen los mismos derechos listados anteriormente bajo el RGPD. La autoridad supervisora relevante es la <a href="https://ico.org.uk" target="_blank" rel="noopener">Information Commissioner's Office (ICO)</a>, Wycliffe House, Water Lane, Wilmslow, SK9 5AF, Reino Unido.</p>
+
+                <h3>California, EEUU (CCPA/CPRA)</h3>
+                <p>Bajo la Ley de Privacidad del Consumidor de California:</p>
+                <ul>
+                    <li><strong>No vendemos</strong> información personal.</li>
+                    <li><strong>No compartimos</strong> información personal para publicidad conductual entre contextos.</li>
+                    <li><strong>No usamos ni divulgamos</strong> información personal sensible para propósitos más allá de los autorizados por la CCPA.</li>
+                    <li>Categorías de información personal recopilada: <strong>Ninguna.</strong></li>
+                </ul>
+                <p>Los residentes de California tienen derecho a saber, eliminar y optar por no participar en la venta de información personal. Dado que no recopilamos datos, estos derechos se cumplen inherentemente.</p>
+
+                <h3>Brasil (LGPD)</h3>
+                <p>Los residentes de Brasil tienen derechos de confirmación, acceso, corrección, anonimización, eliminación y portabilidad de datos personales. Dado que el desarrollador no recopila ni procesa datos personales, estos derechos se cumplen inherentemente. Base legal: consentimiento (aceptación de términos al usar la app).</p>
+
+                <h3>Canadá (PIPEDA)</h3>
+                <p>Los residentes canadienses están protegidos bajo la Ley de Protección de Información Personal y Documentos Electrónicos. Tobydoro cumple con los principios de información justa de PIPEDA: no se recopila información personal, y el propósito del almacenamiento en el dispositivo es únicamente para la funcionalidad de la app.</p>
+
+                <h3>Sudáfrica (POPIA)</h3>
+                <p>Los residentes sudafricanos pueden contactar al <a href="https://inforegulator.org.za" target="_blank" rel="noopener">Information Regulator</a> para consultas de privacidad. El desarrollador no procesa información personal.</p>
+
+                <h3>Japón (APPI)</h3>
+                <p>El desarrollador no adquiere, usa ni proporciona a terceros información personal. Todo el procesamiento de datos ocurre exclusivamente en el dispositivo del usuario.</p>
+            </section>
+
+            <section>
+                <h2>10. Privacidad de Menores</h2>
+                <p>Tobydoro no está dirigida a menores de 13 años (COPPA) ni menores de 16 años (RGPD Artículo 8). La app no recopila intencionalmente información personal de nadie, incluidos menores. Dado que todos los datos permanecen en el dispositivo y nunca se transmiten, no existen preocupaciones de datos relacionadas con la edad.</p>
+            </section>
+
+            <section>
+                <h2>11. Cambios a Esta Política</h2>
+                <p>Si esta política de privacidad se actualiza, la versión revisada se publicará en esta URL y se incluirá en una futura actualización de la app. La fecha de "Última actualización" en la parte superior reflejará el cambio. El uso continuado de la app después de los cambios constituye aceptación de la política actualizada.</p>
+            </section>
+
+            <section>
+                <h2>12. Contacto</h2>
+                <p>Si tienes preguntas sobre esta política de privacidad o deseas ejercer tus derechos sobre tus datos:</p>
+                <ul>
+                    <li><strong>Privacidad:</strong> <a href="mailto:privacy@tobydoro.app">privacy@tobydoro.app</a></li>
+                    <li><strong>Soporte:</strong> <a href="mailto:support@tobydoro.app">support@tobydoro.app</a></li>
+                </ul>
+                <p>Desarrollador: <!-- REPLACE: Tu nombre legal completo --> Mike (desarrollador independiente), España.</p>
+            </section>
+        </article>
+
+        <footer>
+            <p>&copy; 2026 <!-- REPLACE: Your full legal name --> Mike. All rights reserved.</p>
+            <p><a href="https://tobydoro.app">tobydoro.app</a></p>
+        </footer>
+    </div>
+
+    <script>
+        function setLang(lang) {
+            document.getElementById('content-en').classList.toggle('hidden', lang !== 'en');
+            document.getElementById('content-es').classList.toggle('hidden', lang !== 'es');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            document.getElementById('btn-es').classList.toggle('active', lang === 'es');
+            document.getElementById('page-title').textContent = lang === 'en' ? 'Privacy Policy' : 'Política de Privacidad';
+            document.getElementById('page-date').textContent = lang === 'en'
+                ? 'Last updated: February 27, 2026'
+                : 'Última actualización: 27 de febrero de 2026';
+            document.documentElement.lang = lang;
+        }
+
+        // Auto-detect language
+        if (navigator.language && navigator.language.startsWith('es')) {
+            setLang('es');
+        }
+    </script>
+</body>
+</html>
