@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tobydoro — Support / Soporte</title>
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --heading: #1a1a2e;
+      --accent: #0f4c75;
+      --accent-light: #e8f1f8;
+      --text: #333;
+      --text-secondary: #555;
+      --border: #e2e8f0;
+      --radius: 10px;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.65;
+      font-size: 16px;
+    }
+
+    /* ── Top bar ── */
+    .topbar {
+      background: var(--heading);
+      padding: 12px 24px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    .lang-btn {
+      background: transparent;
+      border: 1.5px solid rgba(255,255,255,0.6);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      padding: 5px 14px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: background 0.2s, border-color 0.2s;
+    }
+
+    .lang-btn:hover {
+      background: rgba(255,255,255,0.12);
+      border-color: #fff;
+    }
+
+    /* ── Container ── */
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 24px 60px;
+    }
+
+    /* ── Header ── */
+    .site-header {
+      text-align: center;
+      padding: 48px 0 36px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 40px;
+    }
+
+    .logo-area {
+      font-size: 48px;
+      margin-bottom: 8px;
+    }
+
+    .site-header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--heading);
+      letter-spacing: -0.02em;
+    }
+
+    .tagline {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      margin-top: 4px;
+    }
+
+    /* ── Section headings ── */
+    h2 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--heading);
+      margin-bottom: 20px;
+    }
+
+    /* ── FAQ ── */
+    .faq-section {
+      margin-bottom: 48px;
+    }
+
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    details {
+      border-top: 1px solid var(--border);
+    }
+
+    details:last-child {
+      border-bottom: 1px solid var(--border);
+    }
+
+    summary {
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      padding: 16px 0;
+      font-weight: 600;
+      font-size: 0.97rem;
+      color: var(--heading);
+      user-select: none;
+      gap: 12px;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary .chevron {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--accent-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.25s;
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    details[open] summary .chevron {
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      padding: 0 0 18px;
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    /* ── Contact ── */
+    .contact-section {
+      margin-bottom: 48px;
+      background: var(--accent-light);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 24px 28px;
+    }
+
+    .contact-section h2 {
+      margin-bottom: 10px;
+    }
+
+    .contact-section p {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      margin-bottom: 10px;
+    }
+
+    .contact-section a {
+      color: var(--accent);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .contact-section a:hover {
+      text-decoration: underline;
+    }
+
+    /* ── Links ── */
+    .links-section {
+      margin-bottom: 48px;
+    }
+
+    .links-section h2 {
+      margin-bottom: 14px;
+    }
+
+    .link-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .link-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.95rem;
+    }
+
+    .link-label {
+      color: var(--text-secondary);
+      min-width: 120px;
+    }
+
+    .link-item a {
+      color: var(--accent);
+      text-decoration: none;
+      word-break: break-word;
+    }
+
+    .link-item a:hover {
+      text-decoration: underline;
+    }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding-top: 28px;
+      text-align: center;
+      font-size: 0.82rem;
+      color: #999;
+      line-height: 1.8;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 480px) {
+      .site-header h1 { font-size: 1.6rem; }
+      h2 { font-size: 1.15rem; }
+      .link-label { min-width: 90px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top bar with language toggle -->
+  <div class="topbar">
+    <button class="lang-btn" id="langToggle" onclick="toggleLang()">ES</button>
+  </div>
+
+  <div class="container">
+
+    <!-- ── HEADER ── -->
+    <header class="site-header">
+      <div class="logo-area">⏱️</div>
+      <h1>Tobydoro</h1>
+      <p class="tagline en-content">Focus &amp; Flow Timer</p>
+      <p class="tagline es-content" style="display:none;">Temporizador de Enfoque y Flujo</p>
+    </header>
+
+    <!-- ══════════════ ENGLISH ══════════════ -->
+    <div class="en-content">
+
+      <!-- FAQ EN -->
+      <section class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-list">
+
+          <details>
+            <summary>
+              How do I start a focus session?
+              <span class="chevron">▾</span>
+            </summary>
+            <p class="faq-answer">
+              Tap the play button on the Timer tab. Tobydoro measures how long you stay focused and suggests a proportional break when you stop.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              How are breaks calculated?
+              <span class="chevron">▾</span>
+            </summary>
+            <p class="faq-answer">
+              Break duration is proportional to your focus time. Sessions under 25 minutes get a 5-minute break. Longer sessions get breaks calculated by your chosen ratio (Simple, Balanced, or Custom).
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              Where is my data stored?
+              <span class="chevron">▾</span>
+            </summary>
+            <p class="faq-answer">
+              All your data is stored locally on your device using Apple's SwiftData framework. Nothing is sent to any server. Tobydoro is 100% offline.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              How do I export my data?
+              <span class="chevron">▾</span>
+            </summary>
+            <p class="faq-answer">
+              Go to Settings → Data &amp; Privacy → Export Data. You can export all your sessions, tasks, projects, and journal entries as a JSON file. This feature requires Tobydoro Pro.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              How do I delete all my data?
+              <span class="chevron">▾</span>
+            </summary>
+            <p class="faq-answer">
+              Go to Settings → Data &amp; Privacy → Delete All Data. This permanently removes all sessions, tasks, projects, tags, and journal entries from your device. You can also delete the app to remove all data.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              How do I set up widgets?
+              <span class="chevron">▾</span>
+            </summary>
+            <p class="faq-answer">
+              Long-press on your Home Screen or Lock Screen, tap +, and search for "Tobydoro". Available widget sizes include small, medium, and lock screen widgets.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              How do I manage my Pro subscription?
+              <span class="chevron">▾</span>
+            </summary>
+            <p class="faq-answer">
+              Go to Settings → Tobydoro Pro → Manage Subscription, or open the iOS Settings app → [Your Name] → Subscriptions → Tobydoro. To cancel, turn off auto-renewal before the renewal date.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              How do I report a bug or suggest a feature?
+              <span class="chevron">▾</span>
+            </summary>
+            <p class="faq-answer">
+              Send an email to <a href="mailto:mpulgar.olguin@gmail.com">mpulgar.olguin@gmail.com</a> with a description of the issue and your iOS version. Screenshots or screen recordings are very helpful.
+            </p>
+          </details>
+
+        </div>
+      </section>
+
+      <!-- Contact EN -->
+      <section class="contact-section">
+        <h2>Contact</h2>
+        <p>For support, bug reports, or feature requests, please email us.</p>
+        <a href="mailto:mpulgar.olguin@gmail.com">mpulgar.olguin@gmail.com</a>
+      </section>
+
+      <!-- Links EN -->
+      <section class="links-section">
+        <h2>Links</h2>
+        <div class="link-list">
+          <div class="link-item">
+            <span class="link-label">Privacy Policy</span>
+            <a href="https://mikeastwood.github.io/tobydoro-privacy/" target="_blank" rel="noopener">
+              mikeastwood.github.io/tobydoro-privacy/
+            </a>
+          </div>
+          <div class="link-item">
+            <span class="link-label">App Store</span>
+            <a href="https://apps.apple.com/app/id6760758188" target="_blank" rel="noopener">
+              apps.apple.com/app/id6760758188
+            </a>
+          </div>
+        </div>
+      </section>
+
+    </div>
+    <!-- /en-content -->
+
+    <!-- ══════════════ SPANISH ══════════════ -->
+    <div class="es-content" style="display:none;">
+
+      <!-- FAQ ES -->
+      <section class="faq-section">
+        <h2>Preguntas Frecuentes</h2>
+        <div class="faq-list">
+
+          <details>
+            <summary>
+              ¿Cómo inicio una sesión de enfoque?
+              <span class="chevron">▾</span>
+            </summary>
+            <p class="faq-answer">
+              Toca el botón de reproducción en la pestaña Temporizador. Tobydoro mide cuánto tiempo te concentras y sugiere un descanso proporcional cuando detienes.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              ¿Cómo se calculan los descansos?
+              <span class="chevron">▾</span>
+            </summary>
+            <p class="faq-answer">
+              La duración del descanso es proporcional a tu tiempo de enfoque. Las sesiones menores de 25 minutos tienen un descanso de 5 minutos. Las sesiones más largas se calculan según tu ratio elegido (Simple, Equilibrado o Personalizado).
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              ¿Dónde se almacenan mis datos?
+              <span class="chevron">▾</span>
+            </summary>
+            <p class="faq-answer">
+              Todos tus datos se almacenan localmente en tu dispositivo usando SwiftData de Apple. No se envía nada a ningún servidor. Tobydoro funciona 100% sin conexión.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              ¿Cómo exporto mis datos?
+              <span class="chevron">▾</span>
+            </summary>
+            <p class="faq-answer">
+              Ve a Ajustes → Datos y Privacidad → Exportar datos. Puedes exportar todas tus sesiones, tareas, proyectos y entradas de diario como archivo JSON. Esta función requiere Tobydoro Pro.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              ¿Cómo elimino todos mis datos?
+              <span class="chevron">▾</span>
+            </summary>
+            <p class="faq-answer">
+              Ve a Ajustes → Datos y Privacidad → Eliminar todos los datos. Esto elimina permanentemente todas las sesiones, tareas, proyectos, etiquetas y entradas de diario de tu dispositivo. También puedes eliminar la app para borrar todos los datos.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              ¿Cómo configuro los widgets?
+              <span class="chevron">▾</span>
+            </summary>
+            <p class="faq-answer">
+              Mantén presionada la pantalla de inicio o la pantalla de bloqueo, toca + y busca "Tobydoro". Los tamaños de widget disponibles incluyen pequeño, mediano y widgets de pantalla de bloqueo.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              ¿Cómo gestiono mi suscripción Pro?
+              <span class="chevron">▾</span>
+            </summary>
+            <p class="faq-answer">
+              Ve a Ajustes → Tobydoro Pro → Gestionar suscripción, o abre la app Ajustes de iOS → [Tu nombre] → Suscripciones → Tobydoro. Para cancelar, desactiva la renovación automática antes de la fecha de renovación.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              ¿Cómo reporto un error o sugiero una función?
+              <span class="chevron">▾</span>
+            </summary>
+            <p class="faq-answer">
+              Envía un correo a <a href="mailto:mpulgar.olguin@gmail.com">mpulgar.olguin@gmail.com</a> con una descripción del problema y tu versión de iOS. Las capturas de pantalla o grabaciones de pantalla son muy útiles.
+            </p>
+          </details>
+
+        </div>
+      </section>
+
+      <!-- Contact ES -->
+      <section class="contact-section">
+        <h2>Contacto</h2>
+        <p>Para soporte, reporte de errores o solicitudes de funciones, escríbenos.</p>
+        <a href="mailto:mpulgar.olguin@gmail.com">mpulgar.olguin@gmail.com</a>
+      </section>
+
+      <!-- Links ES -->
+      <section class="links-section">
+        <h2>Enlaces</h2>
+        <div class="link-list">
+          <div class="link-item">
+            <span class="link-label">Política de Privacidad</span>
+            <a href="https://mikeastwood.github.io/tobydoro-privacy/" target="_blank" rel="noopener">
+              mikeastwood.github.io/tobydoro-privacy/
+            </a>
+          </div>
+          <div class="link-item">
+            <span class="link-label">App Store</span>
+            <a href="https://apps.apple.com/app/id6760758188" target="_blank" rel="noopener">
+              apps.apple.com/app/id6760758188
+            </a>
+          </div>
+        </div>
+      </section>
+
+    </div>
+    <!-- /es-content -->
+
+    <!-- ── FOOTER ── -->
+    <footer>
+      <p>© 2025 Michael Pulgar. All rights reserved. / Todos los derechos reservados.</p>
+      <p>Last updated: April 2026 / Última actualización: Abril 2026</p>
+    </footer>
+
+  </div><!-- /container -->
+
+  <script>
+    var currentLang = 'en';
+
+    function toggleLang() {
+      if (currentLang === 'en') {
+        setLang('es');
+      } else {
+        setLang('en');
+      }
+    }
+
+    function setLang(lang) {
+      currentLang = lang;
+
+      var enEls = document.querySelectorAll('.en-content');
+      var esEls = document.querySelectorAll('.es-content');
+      var btn   = document.getElementById('langToggle');
+
+      if (lang === 'es') {
+        enEls.forEach(function(el) { el.style.display = 'none'; });
+        esEls.forEach(function(el) { el.style.display = ''; });
+        btn.textContent = 'EN';
+        document.documentElement.lang = 'es';
+      } else {
+        enEls.forEach(function(el) { el.style.display = ''; });
+        esEls.forEach(function(el) { el.style.display = 'none'; });
+        btn.textContent = 'ES';
+        document.documentElement.lang = 'en';
+      }
+
+      // Close all open details when switching language
+      document.querySelectorAll('details[open]').forEach(function(d) {
+        d.removeAttribute('open');
+      });
+    }
+  </script>
+
+</body>
+</html>
